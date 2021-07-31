@@ -1,0 +1,26 @@
+{
+  "name": "FoxtelGO",
+  "version": "1.0.0",
+  "pkgrel": "1",
+  "description": "Unofficial Foxtel GO desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/coreybruce/FoxtelGO.git"
+  },
+  "keywords": [
+    "mmedia"
+  ],
+  "author": "Corey Bruce",
+  "license": "GPL",
+  "devDependencies": {
+    "electron": "github:castlabs/electron-releases#v13.1.7-wvvmp",
+    "electron-packager": "^15.2.0"
+  },
+  "dependencies": {
+    "electron-context-menu": "^3.1.1"
+  }
+}

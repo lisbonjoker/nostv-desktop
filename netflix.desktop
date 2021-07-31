@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=Netflix
+Comment=Unofficial Netflix desktop application
+Icon=/opt/Netflix/icon.png
+Exec=/opt/Netflix/Netflix.sh
+Actions=
+Categories=AudioVideo;Video;
