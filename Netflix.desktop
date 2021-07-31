@@ -7,3 +7,4 @@ Icon=/opt/Netflix/icon.png
 Exec=/opt/Netflix/Netflix.sh
 Actions=
 Categories=AudioVideo;Video;
+GenericName=Unofficial Netflix desktop application

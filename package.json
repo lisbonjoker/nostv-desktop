@@ -1,15 +1,15 @@
 {
-  "name": "FoxtelGO",
+  "name": "Netflix",
   "version": "1.0.0",
   "pkgrel": "1",
-  "description": "Unofficial Foxtel GO desktop app",
+  "description": "Unofficial Netflix desktop app",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/coreybruce/FoxtelGO.git"
+    "url": "https://gitlab.com/netflix-desktop/application"
   },
   "keywords": [
     "mmedia"
