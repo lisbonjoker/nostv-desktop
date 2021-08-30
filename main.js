@@ -2,7 +2,7 @@ const electron = require('electron')
 const { app, BrowserWindow } = require('electron')
 const contextMenu = require('electron-context-menu');
 app.commandLine.appendSwitch('enable-tcp-fastopen')
-app.commandLine.appendSwitch('widevine-cdm-version', '4.10.2209.0')
+app.commandLine.appendSwitch('widevine-cdm-version', '1.4.9.1088')  
 const path = require('path');
 let pluginName
 switch (process.platform) {
@@ -30,23 +30,24 @@ contextMenu({
 	]
 });
 
+app.commandLine.appendSwitch('widevine-cdm-path', path.join(__dirname, pluginName))
 function createWindow () {
-  // Create the browser window.
-  const mainWindow = new BrowserWindow({
+ // Create the browser window.
+ let mainWindow = new BrowserWindow({
     width: 1280,
     height: 750,
-    icon: __dirname + '/icon.png',
-    backgroundColor: '#2C2C2C',
-    webPreferences: {
+   webPreferences: {
+     plugins: true,
      contextIsolation: true,
      spellcheck: true
-    }
-  })
+   }
+ }) 
+ mainWindow.removeMenu(BrowserWindow);
 
   // and load the index.html of the app.
   mainWindow.loadFile('splash.html')
   setTimeout(function () {
-    mainWindow.loadURL('https://www.netflix.com/browse');
+    mainWindow.loadURL('https://watch.foxtel.com.au/app/#/',{ userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'"});
   }, 3000) // Load store page after 3 secs
   mainWindow.maximize() // start maximized
   mainWindow.setMenuBarVisibility(false)
