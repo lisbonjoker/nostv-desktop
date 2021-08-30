@@ -1,6 +1,6 @@
 {
   "name": "Netflix",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "pkgrel": "1",
   "description": "Unofficial Foxtel GO desktop app",
   "main": "main.js",
