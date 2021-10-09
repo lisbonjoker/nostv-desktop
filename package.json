@@ -1,6 +1,6 @@
 {
   "name": "Netflix",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "pkgrel": "1",
   "description": "Unofficial Netflix desktop app",
   "main": "main.js",
