@@ -1,6 +1,6 @@
 {
   "name": "Netflix",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "pkgrel": "1",
   "description": "Unofficial Netflix desktop app",
   "main": "main.js",
@@ -17,8 +17,8 @@
   "author": "Corey Bruce",
   "license": "GPL",
   "devDependencies": {
-    "electron": "github:castlabs/electron-releases#v13.2.3-wvvmp",
-    "electron-packager": "^15.3.0"
+    "electron": "github:castlabs/electron-releases#v15.1.1-wvvmp",
+    "electron-packager": "^15.4.0"
   },
   "dependencies": {
     "electron-context-menu": "^3.1.1"
