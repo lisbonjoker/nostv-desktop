@@ -2,7 +2,7 @@ const electron = require('electron')
 const { app, BrowserWindow } = require('electron')
 const contextMenu = require('electron-context-menu');
 app.commandLine.appendSwitch('enable-tcp-fastopen')
-app.commandLine.appendSwitch('widevine-cdm-version', '1.4.9.1088')  
+app.commandLine.appendSwitch('widevine-cdm-version', '1.4.9.1088')
 const path = require('path');
 let pluginName
 switch (process.platform) {
@@ -30,19 +30,18 @@ contextMenu({
 	]
 });
 
-app.commandLine.appendSwitch('widevine-cdm-path', path.join(__dirname, pluginName))
 function createWindow () {
- // Create the browser window.
- let mainWindow = new BrowserWindow({
+  // Create the browser window.
+  const mainWindow = new BrowserWindow({
     width: 1280,
     height: 750,
-   webPreferences: {
-     plugins: true,
+    icon: __dirname + '/icon.png',
+    backgroundColor: '#2C2C2C',
+    webPreferences: {
      contextIsolation: true,
      spellcheck: true
-   }
- }) 
- mainWindow.removeMenu(BrowserWindow);
+    }
+  })
 
   // and load the index.html of the app.
   mainWindow.loadFile('splash.html')

@@ -1,7 +1,7 @@
 {
   "name": "Netflix",
   "version": "1.0.3",
-  "pkgrel": "2",
+  "pkgrel": "3",
   "description": "Unofficial Netflix desktop app",
   "main": "main.js",
   "scripts": {
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/coreybruce/FoxtelGO.git"
+    "url": "https://gitlab.com/netflix-desktop/application.git"
   },
   "author": "Corey Bruce",
   "license": "GPL",
   "devDependencies": {
-    "electron": "github:castlabs/electron-releases#v13.6.1-wvvmp"
+    "electron": "github:castlabs/electron-releases#v14.2.2-wvvmp"
   },
   "dependencies": {
     "electron-context-menu": "^3.1.1"
