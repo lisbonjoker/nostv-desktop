@@ -1,0 +1,35 @@
+name: 🕷 cd
+on: [ release ]
+jobs:
+  build_binary:
+    name: build-binary
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@master
+      with:
+        version: '12'
+    - run: npm install -g yarn
+    - run: yarn install
+    - run: yarn build
+    - run: yarn bundle
+    - run: yarn binary
+    - run: chmod -R ugo+x websight-*
+    - uses: JasonEtco/upload-to-release@master
+      name: upload-linux-binary
+      with:
+        args: 'nostv-desktop-linux-x64 application/x-executable'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: JasonEtco/upload-to-release@master
+      name: upload-macOS-binary
+      with:
+        args: 'nostv-desktop-darwin-x64 application/x-mach-binary'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: JasonEtco/upload-to-release@master
+      name: upload-windows-binary
+      with:
+        args: 'nostv-desktop-windows-x64 application/vnd.microsoft.portable-executable'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
