@@ -46,7 +46,7 @@ function createWindow () {
   // and load the index.html of the app.
   mainWindow.loadFile('splash.html')
   setTimeout(function () {
-    mainWindow.loadURL('https://www.netflix.com/browse');
+    mainWindow.loadURL('https://nostv.pt/bemvindo');
   }, 3000) // Load store page after 3 secs
   mainWindow.maximize() // start maximized
   mainWindow.setMenuBarVisibility(false)

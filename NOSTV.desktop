@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=NOSTV
+Comment=Unofficial NOSTV desktop application
+Icon=netflix
+Exec=netflix
+Actions=
+Categories=AudioVideo;Video;
+GenericName=Unofficial NOSTV desktop application

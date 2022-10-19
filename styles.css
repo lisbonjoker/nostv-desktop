@@ -1,7 +1,11 @@
 body {
   margin: 0;
   background: #121212;
+  background-image: url(welcome_bg.jpg);
+  background-size: cover;
+  background-position: center;
 }
+
 .loader-cont {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -21,6 +25,22 @@ body {
   left: 0;
   right: 0;
 }
+
+.title {
+  margin: auto;
+  color: #fff;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.subtitle {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 24px;
+}
+
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
@@ -29,6 +49,7 @@ body {
     opacity: 1;
   }
 }
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -37,11 +58,13 @@ body {
     opacity: 1;
   }
 }
+
 .lds-dual-ring {
   display: inline-block;
   width: 80px;
   height: 80px;
 }
+
 .lds-dual-ring:after {
   content: " ";
   display: block;
@@ -52,6 +75,7 @@ body {
   border-color: #fff transparent #fff transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
+
 @keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg);
@@ -60,6 +84,7 @@ body {
     transform: rotate(360deg);
   }
 }
+
 .logo {
   position: absolute;
   top:0;
@@ -67,9 +92,8 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  width: 10vw;
-  /*height: 200px;*/
-  background: url("netflix.svg");
+  width: 25vw;
+  background: url("nostv.svg");
   background-repeat: no-repeat;
   -webkit-background-origin: padding-box;
   background-origin: padding-box;
